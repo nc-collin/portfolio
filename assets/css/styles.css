@@ -1,0 +1,40 @@
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid #ccc;
+}
+
+.timeline-item {
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.timeline-content:hover {
+  background: #eef5ff;
+}
+
+.timeline-content .details {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.timeline-content:hover .details {
+  display: block;
+}
