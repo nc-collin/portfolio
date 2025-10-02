@@ -1,6 +1,7 @@
 # Personal Portfolio
 Personal Website and Portfolio
-'''
+
+```
 Base Structure
 /portfolio
 │── index.html              → Landing page (Hi! I'm Collin, intro, roles, skills)
@@ -16,4 +17,4 @@ Base Structure
      ├── header.html         → Navigation bar
      ├── footer.html         → Footer
      └── timeline.html       → Reusable timeline component
-'''
+```
