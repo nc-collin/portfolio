@@ -2,10 +2,11 @@
    Global Styles & Variables
 -------------------------- */
 :root {
-  --dark-grey: #333333;
-  --ultimate-grey: #939597;
-  --white: #ffffff;
-  --highlight: #1f77d0; /* professional blue */
+  --mocha: #bfa6a0;
+  --dark-red: #3c2f2f;
+  --white: #fdfbf4;
+  --highlight: #ffd166; /* yellow highlight */
+  --dark-bg: var(--dark-red);
 }
 
 * {
@@ -17,8 +18,7 @@
 
 body {
   background: var(--white);
-  color: var(--dark-grey);
-  line-height: 1.6;
+  color: var(--dark-red);
 }
 
 /* -------------------------
@@ -114,80 +114,67 @@ body {
 }
 
 /* -------------------------
-   Timeline
+   Modern Timeline
 -------------------------- */
-/* Modern Timeline */
-.timeline-modern {
-  background: var(--dark-grey);
-  color: var(--white);
-  padding: 3rem 1rem;
-  border-radius: 12px;
-  max-width: 1000px;
-  margin: 2rem auto;
+.modern-timeline {
+  position: relative;
+  margin: 4rem auto;
+  width: 80px;
+  border-left: 4px solid var(--highlight);
+  min-height: 600px;
+  background: var(--dark-bg);
+  padding-top: 1rem;
 }
 
-.timeline-track {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
+.timeline-item {
+  position: relative;
+  margin: 2.5rem 0;
 }
 
-.timeline-node {
-  background: var(--ultimate-grey);
-  color: var(--white);
-  border: none;
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.timeline-node.active,
-.timeline-node:hover {
+.timeline-dot {
+  width: 22px;
+  height: 22px;
   background: var(--highlight);
-  transform: scale(1.05);
+  border: 3px solid var(--mocha);
+  border-radius: 50%;
+  position: absolute;
+  left: -13px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.timeline-details {
-  text-align: left;
-  background: #444;
-  padding: 1.5rem;
+.timeline-dot:hover {
+  transform: scale(1.2);
+  background: #ffe08a;
+}
+
+/* Popup card */
+.timeline-popup {
+  position: absolute;
+  left: 120px;
+  width: 300px;
+  background: var(--white);
+  padding: 1rem;
   border-radius: 10px;
-}
-
-.timeline-content {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   display: none;
-  animation: fadeIn 0.4s ease;
+  transition: opacity 0.3s ease;
+  z-index: 10;
 }
 
-.timeline-content.active {
+.timeline-popup.active {
   display: block;
 }
 
-.timeline-content h3 {
+.timeline-popup h3 {
+  color: var(--dark-red);
   margin-bottom: 0.3rem;
-  color: var(--highlight);
 }
 
-.timeline-content p {
-  margin-bottom: 0.5rem;
+.timeline-popup p {
+  margin: 0.2rem 0;
 }
-
-.timeline-content ul {
-  padding-left: 1.2rem;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+🔹 Updated C
 
 /* -------------------------
    Core Competencies
