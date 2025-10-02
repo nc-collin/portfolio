@@ -5,8 +5,7 @@
   --dark-grey: #333333;
   --ultimate-grey: #939597;
   --white: #ffffff;
-  --highlight: #a8dadc;   /* pastel blue */
-  /* Alternative: #a8e6cf (pastel green) */
+  --highlight: #1f77d0; /* professional blue */
 }
 
 * {
@@ -117,50 +116,77 @@ body {
 /* -------------------------
    Timeline
 -------------------------- */
-.timeline {
-  position: relative;
-  margin: 3rem auto;
-  padding-left: 2rem;
-  border-left: 3px solid var(--highlight);
-  max-width: 800px;
+/* Modern Timeline */
+.timeline-modern {
+  background: var(--dark-grey);
+  color: var(--white);
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
 
-.timeline-item {
-  margin: 2rem 0;
-  position: relative;
+.timeline-track {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.timeline-date {
+.timeline-node {
+  background: var(--ultimate-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  font-size: 0.8rem;
   font-weight: bold;
-  color: var(--ultimate-grey);
-  margin-bottom: 0.5rem;
+  text-align: center;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeline-node.active,
+.timeline-node:hover {
+  background: var(--highlight);
+  transform: scale(1.05);
+}
+
+.timeline-details {
+  text-align: left;
+  background: #444;
+  padding: 1.5rem;
+  border-radius: 10px;
 }
 
 .timeline-content {
-  background: #f9f9f9;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  display: none;
+  animation: fadeIn 0.4s ease;
 }
 
-.timeline-content:hover {
-  background: #eef8fa;
+.timeline-content.active {
+  display: block;
 }
 
 .timeline-content h3 {
-  color: var(--dark-grey);
+  margin-bottom: 0.3rem;
+  color: var(--highlight);
 }
 
-.timeline-content .details {
-  display: none;
-  margin-top: 0.5rem;
-  font-size: 0.9em;
-  color: #444;
+.timeline-content p {
+  margin-bottom: 0.5rem;
 }
 
-.timeline-content:hover .details {
-  display: block;
+.timeline-content ul {
+  padding-left: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 /* -------------------------
