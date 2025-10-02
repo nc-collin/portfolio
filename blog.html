@@ -1,76 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog and Insights">
-    <title>Blog - Your Name</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collin | Blog</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">YourName</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Portfolio</a></li>
-                <li><a href="products.html" class="nav-link">Products</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                <li><a href="docs.html" class="nav-link">Docs</a></li>
-            </ul>
-            <div class="mobile-toggle" id="mobileToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Main Content -->
-    <div class="container">
-        <section id="blog">
-            <div class="hero">
-                <h1>Blog & Insights</h1>
-                <p>Thoughts, tutorials, and industry insights</p>
-            </div>
+  <!-- Navbar -->
+  <div id="header"></div>
 
-            <div class="blog-post">
-                <h3>Getting Started with Modern Web Development</h3>
-                <div class="blog-meta">Posted on October 1, 2025 • 5 min read</div>
-                <p>Web development has evolved significantly over the past few years. In this article, we'll explore the essential tools and frameworks that every modern developer should know...</p>
-                <br>
-                <a href="#" class="btn">Read More</a>
-            </div>
+  <section id="blog">
+    <h1>Blog</h1>
+    <p class="section-intro">My thoughts, tutorials, and stories 📖</p>
 
-            <div class="blog-post">
-                <h3>Building Scalable Applications: Best Practices</h3>
-                <div class="blog-meta">Posted on September 28, 2025 • 8 min read</div>
-                <p>Scalability is crucial for any successful application. Learn the key principles and patterns that will help your applications grow with your user base...</p>
-                <br>
-                <a href="#" class="btn">Read More</a>
-            </div>
+    <div class="blog-grid">
 
-            <div class="blog-post">
-                <h3>The Future of AI in Web Development</h3>
-                <div class="blog-meta">Posted on September 25, 2025 • 6 min read</div>
-                <p>Artificial Intelligence is transforming how we build and interact with web applications. Discover the latest trends and how to integrate AI into your projects...</p>
-                <br>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </section>
+      <!-- Example Blog Post -->
+      <div class="blog-card">
+        <h3>Getting Started with NLP</h3>
+        <p>A quick intro to Natural Language Processing with Python, featuring simple text analysis and ML basics.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="blog-card">
+        <h3>Building Data Dashboards</h3>
+        <p>Lessons learned from creating real-time dashboards for multiple stakeholders at Happy5.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <!-- Placeholder -->
+      <div class="blog-card">
+        <h3>✍️ New Post</h3>
+        <p>Coming soon...</p>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-        <p>
-            <a href="https://github.com/yourusername">GitHub</a> •
-            <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> •
-            <a href="mailto:your.email@example.com">Email</a>
-        </p>
-    </footer>
+  <!-- Footer -->
+  <div id="footer"></div>
 
-    <script src="script.js"></script>
 </body>
 </html>
