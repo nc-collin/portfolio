@@ -25,3 +25,30 @@ function rotateSkills() {
     skillIndex = (skillIndex + 1) % skills.length;
   }, 2000);
 }
+
+// Timeline interactivity
+document.addEventListener("DOMContentLoaded", () => {
+  const dots = document.querySelectorAll(".timeline-dot");
+  const popup = document.getElementById("timeline-popup");
+  const title = document.getElementById("popup-title");
+  const place = document.getElementById("popup-place");
+  const date = document.getElementById("popup-date");
+  const details = document.getElementById("popup-details");
+
+  dots.forEach(dot => {
+    dot.addEventListener("mouseenter", () => {
+      title.textContent = dot.dataset.title;
+      place.textContent = dot.dataset.place;
+      date.textContent = dot.dataset.date;
+      details.textContent = dot.dataset.details;
+
+      popup.style.top = dot.getBoundingClientRect().top + window.scrollY - 30 + "px";
+      popup.style.left = "120px"; // offset to the right of timeline
+      popup.classList.add("active");
+    });
+
+    dot.addEventListener("mouseleave", () => {
+      popup.classList.remove("active");
+    });
+  });
+});
