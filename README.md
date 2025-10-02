@@ -53,3 +53,16 @@ This automatically inherits the hover behavior + styling without extra code.
      [Details list] → ex: achievements, skills, tools.
 4. Save → refresh browser → done ✅
 ```
+
+
+🔹 Reusable Template (to add new projects)
+```
+To add more projects, copy this block inside <div class="project-grid">:
+
+<div class="project-card">
+  <h3>🚀 [Project Title]</h3>
+  <p>[Short description of project]</p>
+  <a href="[GitHub or Demo link]" target="_blank" class="btn">View Project</a>
+  <a href="[Optional second link]" target="_blank" class="btn">Read More</a>
+</div>
+```
