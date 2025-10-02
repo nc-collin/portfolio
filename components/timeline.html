@@ -1,32 +1,64 @@
-<div class="modern-timeline">
+<!-- components/timeline.html -->
+<div id="modern-timeline" class="modern-timeline" aria-hidden="false">
 
-  <!-- Example item -->
+  <!-- Timeline items (copy the block to add more) -->
   <div class="timeline-item">
-    <div class="timeline-dot" data-title="Project Management Officer" data-place="EBER Petrochemical Group" data-date="Jun 2024 – Sep 2024" data-details="Ensured success of marketing projects; Built Salesforce dashboards."></div>
+    <button class="timeline-dot"
+            data-title="Project Management Officer"
+            data-place="EBER Petrochemical Group"
+            data-date="Jun 2024 – Sep 2024"
+            data-details="Ensured success of marketing projects under CMO direction; developed monitoring dashboards for Salesforce monthly & division achievements.">
+      <span class="sr-only">Project Management Officer at EBER Petrochemical Group (Jun 2024 – Sep 2024)</span>
+    </button>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-dot" data-title="Research Assistant" data-place="NLPSA @ Academia Sinica" data-date="Oct 2022 – Jul 2023" data-details="Published at EMNLP 2023; Worked on LLM & NLP pipelines."></div>
+    <button class="timeline-dot"
+            data-title="Research Assistant"
+            data-place="NLPSA @ Academia Sinica"
+            data-date="Oct 2022 – Jul 2023"
+            data-details="Collaborated on NLP research; published 'Location-Aware Visual Question Generation' at EMNLP 2023.">
+      <span class="sr-only">Research Assistant at NLPSA (Oct 2022 – Jul 2023)</span>
+    </button>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-dot" data-title="Data Analyst" data-place="Happy5" data-date="Nov 2020 – Aug 2021" data-details="Built dashboards, automated ETL, handled >1000 user datasets."></div>
+    <button class="timeline-dot"
+            data-title="Data Analyst"
+            data-place="Happy5"
+            data-date="Nov 2020 – Aug 2021"
+            data-details="Built dashboards, automated ETL pipelines to deliver real-time dashboards and ad-hoc analyses for multiple clients.">
+      <span class="sr-only">Data Analyst at Happy5 (Nov 2020 – Aug 2021)</span>
+    </button>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-dot" data-title="M.Sc. Data Science" data-place="National Taiwan University" data-date="2021 – 2023" data-details="Specialized in NLP and Machine Learning."></div>
+    <button class="timeline-dot"
+            data-title="M.Sc. Data Science"
+            data-place="National Taiwan University"
+            data-date="Sep 2021 – Jul 2023"
+            data-details="Specialized in NLP & ML; thesis & research contributions in LLM applications.">
+      <span class="sr-only">M.Sc. Data Science at NTU (Sep 2021 – Jul 2023)</span>
+    </button>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-dot" data-title="B.Sc. Data Science & Mathematics" data-place="Bandung Institute of Technology" data-date="2016 – 2020" data-details="Graduated Cum Laude in Data Science (4.23/4.3) and Mathematics."></div>
+    <button class="timeline-dot"
+            data-title="B.Sc. Data Science & Mathematics"
+            data-place="Bandung Institute of Technology"
+            data-date="Aug 2016 – Jul 2020"
+            data-details="Graduated with high honours (Data Science GPA 4.23/4.3). Focused on ML/DL and advanced statistics.">
+      <span class="sr-only">B.Sc. Data Science & Mathematics at ITB (Aug 2016 – Jul 2020)</span>
+    </button>
   </div>
 
 </div>
 
-<!-- Pop-up card -->
-<div id="timeline-popup" class="timeline-popup">
+<!-- Popup card (single instance used for all dots) -->
+<div id="timeline-popup" class="timeline-popup" role="dialog" aria-hidden="true" aria-label="Timeline detail">
+  <button id="popup-close" class="popup-close" aria-label="Close detail">✕</button>
   <h3 id="popup-title"></h3>
-  <p id="popup-place"></p>
-  <small id="popup-date"></small>
+  <p id="popup-place" class="muted"></p>
+  <small id="popup-date" class="muted"></small>
   <p id="popup-details"></p>
 </div>
