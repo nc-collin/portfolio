@@ -142,62 +142,118 @@ img { max-width: 100%; height: auto; display: block; }
 /* -------------------------
    Modern Timeline
 -------------------------- */
+/* ----- Modern Timeline (updated & centered line) ----- */
 .modern-timeline {
   position: relative;
-  margin: 4rem auto;
-  width: 80px;
-  border-left: 4px solid var(--highlight);
-  min-height: 600px;
-  background: var(--dark-bg);
-  padding-top: 1rem;
+  max-width: 1100px;
+  margin: 3.5rem auto;
+  padding: 2rem 1.5rem;
+  background: var(--dark-red);
+  border-radius: 12px;
+  color: var(--white);
+  overflow: visible;
 }
 
+/* vertical line to the left of items (at ~96px) */
+.modern-timeline::before {
+  content: "";
+  position: absolute;
+  left: 96px;
+  top: 24px;
+  bottom: 24px;
+  width: 4px;
+  background: var(--highlight);
+  border-radius: 4px;
+}
+
+/* each item leaves space on the left for the line/dot */
 .timeline-item {
   position: relative;
-  margin: 2.5rem 0;
+  margin: 1.75rem 0;
+  padding-left: 140px; /* space for the line/dot */
 }
 
+/* dot (use <button> for accessibility) */
 .timeline-dot {
+  position: absolute;
+  left: 84px; /* places the dot centered on the line */
+  top: 6px;
   width: 22px;
   height: 22px;
   background: var(--highlight);
   border: 3px solid var(--mocha);
   border-radius: 50%;
-  position: absolute;
-  left: -13px;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.18s ease, background 0.18s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
 }
 
-.timeline-dot:hover {
+/* hover/focus states */
+.timeline-dot:hover,
+.timeline-dot:focus {
   transform: scale(1.2);
   background: #ffe08a;
+  outline: none;
 }
 
 /* Popup card */
 .timeline-popup {
   position: absolute;
-  left: 120px;
-  width: 300px;
+  min-width: 300px;
+  max-width: 420px;
+  left: 140px; /* initial fallback */
+  top: 0;
+  display: none;
+  opacity: 0;
   background: var(--white);
+  color: var(--dark-red);
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  display: none;
-  transition: opacity 0.3s ease;
-  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 40;
+  transition: opacity 0.2s ease, transform 0.18s ease;
 }
 
-.timeline-popup.active { display: block; }
+/* visible state */
+.timeline-popup.active {
+  display: block;
+  opacity: 1;
+}
 
-.timeline-popup h3 {
+/* small close button */
+.popup-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border: none;
+  background: transparent;
   color: var(--dark-red);
-  margin-bottom: 0.3rem;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.timeline-popup p {
-  margin: 0.2rem 0;
+/* content styles */
+.timeline-popup h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+  line-height: 1.1;
 }
+.timeline-popup .muted {
+  color: #6b5b5b;
+  margin: 3px 0;
+  display: block;
+  font-size: 0.9rem;
+}
+.timeline-popup p { margin-top: 0.6rem; }
+
+/* mobile tweaks */
+@media (max-width: 720px) {
+  .modern-timeline::before { left: 56px; }
+  .timeline-item { padding-left: 96px; }
+  .timeline-dot { left: 48px; }
+  .timeline-popup { left: 70px; width: calc(100% - 90px); max-width: calc(100% - 90px); }
+}
+
 
 /* -------------------------
    Skills Grid
