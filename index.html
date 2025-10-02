@@ -6,6 +6,7 @@
     <meta name="description" content="Nicholas Collin Suwono - Data Scientist, Data Analyst, and Entrepreneur specializing in NLP and LLM">
     <title>Nicholas Collin Suwono - Data Scientist & Analyst</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -29,82 +30,87 @@
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Hero Section -->
-        <section id="portfolio">
-            <div class="hero-intro">
-                <div class="hero-text">
-                    <h1>Hi, I'm Collin! 👋</h1>
-                    <p class="tagline">Data Scientist | Data Analyst | Entrepreneur</p>
-                    <p class="bio">Master's graduate specializing in Data Science with expertise in Natural Language Processing, Large Language Models, and a published research paper in EMNLP 2023. Passionate about transforming data into actionable insights and building innovative solutions.</p>
-                    <div class="hero-buttons">
-                        <a href="https://www.linkedin.com/in/nicholas-collin-suwono" target="_blank" class="btn">LinkedIn</a>
-                        <a href="https://github.com/nc-collin" target="_blank" class="btn btn-secondary">GitHub</a>
-                        <a href="mailto:collinsuwono@gmail.com" class="btn btn-secondary">Contact Me</a>
+        <!-- INTRO SECTION -->
+        <section class="intro-section">
+            <div class="intro-content">
+                <div class="intro-left">
+                    <div class="profile-photo">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-placeholder">
-                        <span>📸</span>
-                        <p>Your Photo Here</p>
+                
+                <div class="intro-right">
+                    <h1 class="intro-name">Hi, I'm Collin! 👋</h1>
+                    <p class="intro-roles">Data Scientist | Data Analyst | Entrepreneur</p>
+                    <p class="intro-tagline">I do Operations, AI, and Problem Solving</p>
+                    
+                    <div class="animated-skills">
+                        <span class="skills-label">Expert in:</span>
+                        <span class="animated-skill" id="animatedSkill">Natural Language Processing</span>
                     </div>
-                </div>
-            </div>
-
-            <!-- Key Skills - Minimal but Highlighted -->
-            <div class="skills-highlight">
-                <h2>Core Competencies</h2>
-                <div class="skills-grid">
-                    <div class="skill-badge">
-                        <span class="skill-icon">🤖</span>
-                        <div>
-                            <h4>NLP & LLM</h4>
-                            <p>Large Language Models, PyTorch</p>
-                        </div>
-                    </div>
-                    <div class="skill-badge">
-                        <span class="skill-icon">📊</span>
-                        <div>
-                            <h4>Data Analytics</h4>
-                            <p>SQL, Python, Looker Studio</p>
-                        </div>
-                    </div>
-                    <div class="skill-badge">
-                        <span class="skill-icon">🔬</span>
-                        <div>
-                            <h4>Machine Learning</h4>
-                            <p>TensorFlow, scikit-learn, Keras</p>
-                        </div>
-                    </div>
-                    <div class="skill-badge">
-                        <span class="skill-icon">📈</span>
-                        <div>
-                            <h4>Data Visualization</h4>
-                            <p>Power BI, Excel, Data Studio</p>
-                        </div>
-                    </div>
-                    <div class="skill-badge">
-                        <span class="skill-icon">⚙️</span>
-                        <div>
-                            <h4>ETL & Automation</h4>
-                            <p>Pipeline Development, APIs</p>
-                        </div>
-                    </div>
-                    <div class="skill-badge">
-                        <span class="skill-icon">🎯</span>
-                        <div>
-                            <h4>Project Management</h4>
-                            <p>Stakeholder Management, Agile</p>
-                        </div>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/nicholas-collin-suwono" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/nc-collin" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:collinsuwono@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+6285810310309" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Professional Experience -->
-            <h2 style="margin: 3rem 0 1.5rem 0;">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
+        <!-- PROFESSIONAL EXPERIENCE SECTION -->
+        <section class="section-container">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-index="0">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-preview">
+                        <h3>Project Management Officer</h3>
+                        <p>EBER Petrochemical Group</p>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Project Management Officer</h3>
+                                <p class="company">EBER Petrochemical Group</p>
+                            </div>
+                            <span class="timeline-date">Jun 2024 - Sep 2024</span>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">MS Excel</span>
+                            <span class="tag">Dashboard</span>
+                            <span class="tag">Project Management</span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Ensured success of marketing projects under Chief Marketing Officer's direction</li>
+                            <li>Developed monitoring dashboards for Salesforce monthly and divisional achievements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-index="1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-preview">
+                        <h3>Research Assistant</h3>
+                        <p>Academia Sinica</p>
+                    </div>
+                    <div class="timeline-details">
                         <div class="timeline-header">
                             <div>
                                 <h3>Research Assistant</h3>
@@ -126,31 +132,14 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Project Management Officer</h3>
-                                <p class="company">EBER Petrochemical Group</p>
-                            </div>
-                            <span class="timeline-date">Jun 2024 - Sep 2024</span>
-                        </div>
-                        <div class="timeline-tags">
-                            <span class="tag">MS Excel</span>
-                            <span class="tag">Dashboard</span>
-                            <span class="tag">Project Management</span>
-                        </div>
-                        <ul class="timeline-achievements">
-                            <li>Ensured success of marketing projects under Chief Marketing Officer's direction</li>
-                            <li>Developed monitoring dashboards for Salesforce monthly and divisional achievements</li>
-                        </ul>
+                <div class="timeline-item" data-index="2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-preview">
+                        <h3>Data Analyst</h3>
+                        <p>Happy5</p>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-details">
                         <div class="timeline-header">
                             <div>
                                 <h3>Data Analyst</h3>
@@ -173,108 +162,118 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Academic Achievement -->
-            <h2 style="margin: 3rem 0 1.5rem 0;">Academic Achievement</h2>
-            <div class="publication-card">
-                <div class="publication-icon">📄</div>
-                <div class="publication-content">
-                    <h3>Location-Aware Visual Question Generation with Lightweight Models</h3>
-                    <p class="publication-venue"><strong>EMNLP 2023</strong> - Association for Computational Linguistics</p>
-                    <p class="publication-authors">Nicholas Suwono, Justin Chen, Tun Hung, Ting-Hao Huang, I-Bin Liao, Yung-Hui Li, Lun-Wei Ku, and Shao-Hua Sun</p>
-                    <p class="publication-description">Joint project between Foxconn Research Institute and Academia Sinica, demonstrating that lightweight models (FDT5) can achieve comparable performance to GPT-4 for location-aware visual question generation.</p>
-                    <div class="publication-links">
-                        <a href="https://aclanthology.org/2023.emnlp-main.88" target="_blank" class="btn btn-small">Read Paper</a>
-                        <a href="https://github.com/AcademiaSinicaNLPLab/LocaVQG" target="_blank" class="btn btn-secondary btn-small">View Code</a>
+        <!-- ACADEMIC ACHIEVEMENT SECTION -->
+        <section class="section-container">
+            <h2 class="section-title">Academic Achievement</h2>
+            
+            <div class="publication-highlight">
+                <div class="publication-badge">
+                    <i class="fas fa-award"></i>
+                    <span>EMNLP 2023</span>
+                </div>
+                <h3>Location-Aware Visual Question Generation with Lightweight Models</h3>
+                <p class="publication-meta">Nicholas Suwono, Justin Chen, Tun Hung, Ting-Hao Huang, I-Bin Liao, Yung-Hui Li, Lun-Wei Ku, and Shao-Hua Sun</p>
+                <p class="publication-desc">Demonstrating that lightweight models (FDT5) can achieve comparable performance to GPT-4 for location-aware visual question generation.</p>
+                <div class="publication-links">
+                    <a href="https://aclanthology.org/2023.emnlp-main.88" target="_blank" class="pub-link">
+                        <i class="fas fa-file-alt"></i> Read Paper
+                    </a>
+                    <a href="https://github.com/AcademiaSinicaNLPLab/LocaVQG" target="_blank" class="pub-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMIC BACKGROUND SECTION -->
+        <section class="section-container">
+            <h2 class="section-title">Academic Background</h2>
+            
+            <div class="education-cards">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>Master of Science</h3>
+                        <p class="edu-school">National Taiwan University</p>
+                        <p class="edu-major">Mathematics</p>
+                        <p class="edu-period">Sep 2021 - Jul 2023</p>
+                        <div class="edu-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Cum Laude | GPA: 3.69/4.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>Bachelor of Science</h3>
+                        <p class="edu-school">Bandung Institute of Technology</p>
+                        <p class="edu-major">Data Science</p>
+                        <p class="edu-period">Aug 2016 - Jul 2020</p>
+                        <div class="edu-badge">
+                            <i class="fas fa-star"></i>
+                            <span>GPA: 4.23/4.3</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Academic Background -->
-            <h2 style="margin: 3rem 0 1.5rem 0;">Academic Background</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">🎓</div>
-                    <h3>Master of Science</h3>
-                    <p class="institution">National Taiwan University</p>
-                    <p class="period">Sep 2021 - Jul 2023</p>
-                    <p class="major"><strong>Major:</strong> Mathematics</p>
-                    <p class="achievement">✨ Cum Laude | GPA: 3.69/4.0</p>
-                    <p class="courses"><strong>Key Courses:</strong> Deep Learning, Generalized Linear Model, Data Analysis</p>
+        <!-- CORE COMPETENCIES SECTION -->
+        <section class="section-container">
+            <h2 class="section-title">Core Competencies</h2>
+            
+            <div class="competencies-grid">
+                <div class="competency-category">
+                    <h4><i class="fas fa-code"></i> Programming & ML</h4>
+                    <div class="comp-tags">
+                        <span>Python</span>
+                        <span>PyTorch</span>
+                        <span>TensorFlow</span>
+                        <span>scikit-learn</span>
+                        <span>Keras</span>
+                        <span>pandas</span>
+                        <span>nltk</span>
+                    </div>
                 </div>
 
-                <div class="education-card">
-                    <div class="education-icon">🎓</div>
-                    <h3>Bachelor of Science</h3>
-                    <p class="institution">Bandung Institute of Technology</p>
-                    <p class="period">Aug 2016 - Jul 2020</p>
-                    <p class="major"><strong>Major:</strong> Data Science</p>
-                    <p class="achievement">✨ GPA: 4.23/4.3</p>
-                    <p class="courses"><strong>Key Courses:</strong> ML & DL, Data Science Computing, Bitcoin in Big Data Era, Financial Technology</p>
+                <div class="competency-category">
+                    <h4><i class="fas fa-database"></i> Data & Analytics</h4>
+                    <div class="comp-tags">
+                        <span>SQL</span>
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>Google Data Studio</span>
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Tech Stack -->
-            <h2 style="margin: 3rem 0 1.5rem 0;">Technical Proficiency</h2>
-            <div class="tech-stack">
-                <div class="tech-category">
-                    <h4>Programming & ML</h4>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">TensorFlow</span>
-                        <span class="tech-badge">scikit-learn</span>
-                        <span class="tech-badge">Keras</span>
-                        <span class="tech-badge">pandas</span>
-                        <span class="tech-badge">nltk</span>
+                <div class="competency-category">
+                    <h4><i class="fas fa-tools"></i> Development Tools</h4>
+                    <div class="comp-tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>GitLab</span>
+                        <span>APIs</span>
+                        <span>OpenAI</span>
                     </div>
                 </div>
-                <div class="tech-category">
-                    <h4>Data & Analytics</h4>
-                    <div class="tech-badges">
-                        <span class="tech-badge">SQL</span>
-                        <span class="tech-badge">MySQL</span>
-                        <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">Google Data Studio</span>
-                        <span class="tech-badge">Power BI</span>
-                        <span class="tech-badge">Excel</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h4>Development Tools</h4>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Git</span>
-                        <span class="tech-badge">GitHub</span>
-                        <span class="tech-badge">GitLab</span>
-                        <span class="tech-badge">APIs</span>
-                        <span class="tech-badge">OpenAI</span>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Languages -->
-            <div class="languages-section">
-                <h3>Languages</h3>
-                <div class="language-grid">
-                    <div class="language-item">
-                        <span class="lang-flag">🇮🇩</span>
-                        <span>Indonesian</span>
-                        <span class="lang-level">Native</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="lang-flag">🇬🇧</span>
-                        <span>English</span>
-                        <span class="lang-level">Professional</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="lang-flag">🇨🇳</span>
-                        <span>Mandarin</span>
-                        <span class="lang-level">Intermediate</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="lang-flag">🇯🇵</span>
-                        <span>Japanese</span>
-                        <span class="lang-level">Elementary</span>
+                <div class="competency-category">
+                    <h4><i class="fas fa-language"></i> Languages</h4>
+                    <div class="comp-tags">
+                        <span>🇮🇩 Indonesian (Native)</span>
+                        <span>🇬🇧 English (Professional)</span>
+                        <span>🇨🇳 Mandarin (Intermediate)</span>
+                        <span>🇯🇵 Japanese (Elementary)</span>
                     </div>
                 </div>
             </div>
@@ -284,13 +283,8 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Nicholas Collin Suwono. All rights reserved.</p>
-        <p>
-            <a href="https://github.com/nc-collin">GitHub</a> •
-            <a href="https://www.linkedin.com/in/nicholas-collin-suwono">LinkedIn</a> •
-            <a href="mailto:collinsuwono@gmail.com">Email</a>
-        </p>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-            📍 Tangerang, Banten, Indonesia | 📞 +62 858 1031 0309
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+            📍 Tangerang, Banten, Indonesia
         </p>
     </footer>
 
