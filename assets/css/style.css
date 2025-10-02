@@ -282,6 +282,53 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* -------------------------
+   Blog & Docs
+-------------------------- */
+#blog, #docs {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.section-intro {
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: var(--mocha);
+}
+
+.blog-grid, .docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.blog-card, .docs-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.blog-card:hover, .docs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.blog-card h3, .docs-card h3 {
+  color: var(--dark-red);
+  margin-bottom: 0.6rem;
+}
+
+.blog-card p, .docs-card p {
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+
+/* -------------------------
    Footer
 -------------------------- */
 footer {
