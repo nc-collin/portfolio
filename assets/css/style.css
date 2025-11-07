@@ -174,15 +174,29 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* -------------------------
+   Experience Section
+-------------------------- */
+#experience {
+  background: var(--dark-red);
+  padding: 3rem 1.5rem;
+  margin: 0;
+}
+
+#experience h2 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* -------------------------
    Modern Timeline
 -------------------------- */
 .modern-timeline {
   position: relative;
   max-width: 1100px;
-  margin: 3.5rem auto;
-  padding: 3rem 1.5rem;
-  background: var(--dark-red);
-  border-radius: 12px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
   color: var(--white);
 }
 
@@ -190,9 +204,9 @@ img { max-width: 100%; height: auto; display: block; }
 .modern-timeline::before {
   content: "";
   position: absolute;
-  left: 60px;
-  top: 60px;
-  bottom: 60px;
+  left: 180px;
+  top: 20px;
+  bottom: 20px;
   width: 3px;
   background: var(--highlight);
   border-radius: 3px;
@@ -201,17 +215,30 @@ img { max-width: 100%; height: auto; display: block; }
 /* Each timeline item */
 .timeline-item {
   position: relative;
-  margin: 2.5rem 0;
-  padding-left: 100px;
+  margin: 2rem 0;
+  padding-left: 220px;
   min-height: 80px;
   display: flex;
   align-items: flex-start;
 }
 
+/* Timeline year - positioned on the left */
+.timeline-year {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 160px;
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--highlight);
+  padding-right: 1rem;
+}
+
 /* Timeline dot - positioned on the vertical line */
 .timeline-dot {
   position: absolute;
-  left: 48px;
+  left: 168px;
   top: 8px;
   width: 24px;
   height: 24px;
@@ -310,15 +337,21 @@ img { max-width: 100%; height: auto; display: block; }
 /* Mobile responsive */
 @media (max-width: 720px) {
   .modern-timeline::before {
-    left: 30px;
+    left: 80px;
   }
 
   .timeline-item {
-    padding-left: 70px;
+    padding-left: 110px;
+  }
+
+  .timeline-year {
+    width: 60px;
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
   }
 
   .timeline-dot {
-    left: 18px;
+    left: 68px;
     width: 20px;
     height: 20px;
   }
