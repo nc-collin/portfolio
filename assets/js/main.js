@@ -14,24 +14,58 @@ function loadComponent(id, file) {
     });
 }
 
-// --- Skill rotator (from CV)
-function initSkillRotator() {
+// --- Typewriter Effect with Skill Rotation
+function initTypewriter() {
   const skills = [
     "Natural Language Processing",
     "Data Analytics",
-    "LLM & ML",
+    "LLM & Machine Learning",
     "Mathematics & Statistics",
     "Project Management",
-    "Stakeholder Management"
+    "Stakeholder Management",
+    "Operations & Strategy",
+    "AI Solutions"
   ];
-  const el = document.getElementById("skill-rotator");
+
+  const el = document.getElementById("typewriter-text");
   if (!el) return;
-  let idx = 0;
-  el.textContent = skills[idx];
-  setInterval(() => {
-    idx = (idx + 1) % skills.length;
-    el.textContent = skills[idx];
-  }, 2200);
+
+  let skillIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+
+  function type() {
+    const currentSkill = skills[skillIndex];
+
+    if (isDeleting) {
+      // Deleting characters
+      el.textContent = currentSkill.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50; // Faster deletion
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        skillIndex = (skillIndex + 1) % skills.length;
+        typingSpeed = 500; // Pause before typing next skill
+      }
+    } else {
+      // Typing characters
+      el.textContent = currentSkill.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100; // Normal typing speed
+
+      if (charIndex === currentSkill.length) {
+        isDeleting = true;
+        typingSpeed = 2000; // Pause at end of word
+      }
+    }
+
+    setTimeout(type, typingSpeed);
+  }
+
+  // Start the typewriter effect
+  type();
 }
 
 // --- Timeline initialization (simplified - now using pure CSS hover effects)
@@ -73,7 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadComponent("footer", "components/footer.html");
 
     // initialization
-    initSkillRotator();
+    initTypewriter();
     initTimeline();
   } catch (err) {
     console.error("Error loading components or initializing:", err);
